@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nochanceall-india.github.io/ncai-web/sitemap.xml
