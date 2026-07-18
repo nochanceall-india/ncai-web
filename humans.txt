@@ -1,0 +1,45 @@
+```txt
+/* TEAM */
+
+Project Name: NCAI (No Chance Against Corruption India)
+
+Organization:
+NCAI Community
+
+Mission:
+Promoting transparency, accountability, ethical values, and responsible citizenship across India.
+
+Website:
+https://nochanceall-india.github.io/ncai-web/
+
+Email:
+nochacnceallindia@gmail.com
+
+Volunteer Form:
+https://forms.gle/T73kmzuNLyExCqWw6
+
+Complaint Form:
+https://forms.gle/D9Sf7DwSyZPgmbpb8
+
+
+/******************************/
+
+Technology:
+HTML5
+CSS3
+JavaScript
+GitHub Pages
+
+Standards:
+Responsive Design
+SEO Optimized
+Accessible Web
+
+/******************************/
+
+Thank you for visiting NCAI.
+
+Together, we can build a transparent and corruption-free India.
+
+© 2026 NCAI. All Rights Reserved.
+```
