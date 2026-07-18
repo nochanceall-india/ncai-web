@@ -1,864 +1,4529 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-<head>  
+<head>
 
-        <title>NCAI | No Chance Against Corruption India</title>
+<meta charset="UTF-8">
 
-<meta name="description" content="NCAI (No Chance Against Corruption India) is a citizen-driven initiative promoting transparency, accountability, awareness against corruption, and responsible reporting across India.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="keywords" content="NCAI, No Chance Against Corruption India, Anti Corruption, Transparency, India, Volunteer, Report Corruption">
+<title>NCAI | Voice Against Corruption India</title>
 
-<meta name="author" content="NCAI">
+<meta name="description" content="NCAI (No Chance Against Corruption India) is a people's movement raising voice against corruption and promoting transparency, accountability and justice.">
+
+<meta name="keywords" content="NCAI, No Chance Against Corruption India, corruption report, anti corruption India, volunteer movement">
+
+<meta name="author" content="NCAI India">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://nochanceall-india.github.io/ncai-web/">
 
-<meta property="og:title" content="NCAI | Voice Against Corruption">
 
-<meta property="og:description" content="Join NCAI and help build a transparent, accountable and corruption-free India.">
+<!-- Open Graph -->
+
+<meta property="og:title" content="NCAI | Voice Against Corruption India">
+
+<meta property="og:description" content="Join NCAI movement against corruption. Report corruption and become a volunteer.">
 
 <meta property="og:type" content="website">
 
 <meta property="og:url" content="https://nochanceall-india.github.io/ncai-web/">
 
-<meta property="og:image" content="logo.png">
+<meta property="og:image" content="https://nochanceall-india.github.io/ncai-web/logo.png">
 
-<meta name="theme-color" content="#ff6b00">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NCAI | Voice Against Corruption</title>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<!-- Twitter Card -->
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="NCAI | Voice Against Corruption India">
+
+<meta name="twitter:description" content="A movement against corruption and injustice.">
+
+<meta name="twitter:image" content="https://nochanceall-india.github.io/ncai-web/logo.png">
+
+
+<!-- JSON LD -->
+
+<script type="application/ld+json">
+
+{
+ "@context":"https://schema.org",
+ "@type":"Organization",
+ "name":"NCAI - No Chance Against Corruption India",
+ "url":"https://nochanceall-india.github.io/ncai-web/",
+ "logo":"https://nochanceall-india.github.io/ncai-web/logo.png",
+ "description":"A public movement against corruption promoting transparency and accountability.",
+ "sameAs":[
+ "https://instagram.com/nochanceallindia",
+ "https://twitter.com/nochanceindia"
+ ]
+}
+
+</script>
+
 
 <style>
+
+/* =========================
+   GLOBAL STYLE
+========================= */
+
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:
+"Inter",
+"Segoe UI",
+Arial,
+sans-serif;
 scroll-behavior:smooth;
 }
 
+
+:root{
+
+--bg:#0d1117;
+
+--card:rgba(255,255,255,0.08);
+
+--orange:#ff6b00;
+
+--orange-light:#ff9d4d;
+
+--white:#ffffff;
+
+--gray:#b8bec8;
+
+}
+
+
 body{
-background:#0d1117;
+
+background:var(--bg);
+
 color:white;
+
 overflow-x:hidden;
+
 }
 
-/* Scrollbar */
+
+
+/* Scroll Bar */
+
+
 ::-webkit-scrollbar{
-width:8px;
+
+width:10px;
+
 }
+
+
+::-webkit-scrollbar-track{
+
+background:#080b10;
+
+}
+
+
 ::-webkit-scrollbar-thumb{
-background:#ff6b00;
-border-radius:10px;
+
+background:var(--orange);
+
+border-radius:20px;
+
 }
 
-/* Navbar */
 
-header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,.75);
-backdrop-filter:blur(12px);
-z-index:1000;
-}
 
-.logo{
-font-size:30px;
-font-weight:700;
-color:#ff6b00;
-}
+/* Links */
 
-.logo span{
-color:white;
-}
+a{
 
-nav a{
 text-decoration:none;
+
 color:white;
-margin-left:28px;
-font-size:16px;
-transition:.3s;
+
 }
 
-nav a:hover{
-color:#ff6b00;
+
+
+/* Container */
+
+.container{
+
+width:90%;
+
+max-width:1200px;
+
+margin:auto;
+
 }
 
-/* Hero */
 
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:0 10%;
+
+/* Glass Card */
+
+.glass{
+
 background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
+
+rgba(255,255,255,0.08);
+
+border:
+
+1px solid rgba(255,255,255,0.15);
+
+backdrop-filter:
+
+blur(15px);
+
+-webkit-backdrop-filter:
+
+blur(15px);
+
+border-radius:25px;
+
 }
 
-.hero-content{
-max-width:900px;
-}
 
-.hero h1{
-font-size:65px;
-font-weight:700;
-margin-bottom:15px;
-}
+/* Buttons */
 
-.hero h1 span{
-color:#ff6b00;
-}
-
-.hero p{
-font-size:20px;
-line-height:1.8;
-margin-bottom:40px;
-color:#ddd;
-}
-
-.buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
 
 .btn{
-padding:16px 34px;
-text-decoration:none;
-border-radius:10px;
-font-size:18px;
-font-weight:600;
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:15px 30px;
+
+border-radius:50px;
+
+font-weight:700;
+
 transition:.3s;
+
+cursor:pointer;
+
+border:none;
+
 }
 
-.btn-orange{
-background:#ff6b00;
+
+.btn-primary{
+
+background:
+
+linear-gradient(
+45deg,
+#ff6b00,
+#ff9d4d
+);
+
 color:white;
+
+box-shadow:
+
+0 0 30px rgba(255,107,0,.4);
+
 }
 
-.btn-orange:hover{
-background:#ff8a33;
+
+.btn-primary:hover{
+
 transform:translateY(-5px);
+
+box-shadow:
+
+0 0 50px rgba(255,107,0,.7);
+
 }
 
-.btn-dark{
-border:2px solid #ff6b00;
-color:#ff6b00;
+
+.btn-outline{
+
+border:2px solid var(--orange);
+
+color:var(--orange);
+
+background:transparent;
+
 }
 
-.btn-dark:hover{
-background:#ff6b00;
+
+.btn-outline:hover{
+
+background:var(--orange);
+
 color:white;
-transform:translateY(-5px);
+
 }
 
-.scroll{
-margin-top:60px;
-font-size:14px;
-color:#aaa;
-animation:updown 1.5s infinite;
+
+
+/* Section */
+
+
+section{
+
+padding:100px 0;
+
 }
 
-@keyframes updown{
-0%{transform:translateY(0);}
-50%{transform:translateY(10px);}
-100%{transform:translateY(0);}
+
+
+.section-title{
+
+text-align:center;
+
+font-size:45px;
+
+margin-bottom:20px;
+
 }
 
-/* Mobile */
+
+.section-title span{
+
+color:var(--orange);
+
+}
+
+
+.section-desc{
+
+text-align:center;
+
+max-width:700px;
+
+margin:auto;
+
+color:var(--gray);
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+
+
+
+/* Loader */
+
+
+#loader{
+
+position:fixed;
+
+height:100vh;
+
+width:100%;
+
+background:#080b10;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+
+.loader-circle{
+
+height:80px;
+
+width:80px;
+
+border-radius:50%;
+
+border:
+
+5px solid rgba(255,255,255,.1);
+
+border-top-color:var(--orange);
+
+animation:
+
+spin 1s linear infinite;
+
+}
+
+
+@keyframes spin{
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+
+
+/* Scroll Animation */
+
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+
+.reveal.active{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+
+
+/* Responsive */
+
 
 @media(max-width:768px){
 
-header{
-padding:15px 5%;
+
+.section-title{
+
+font-size:32px;
+
 }
 
-nav{
-display:none;
+
+section{
+
+padding:70px 0;
+
 }
 
-.hero h1{
-font-size:40px;
-}
-
-.hero p{
-font-size:17px;
-}
 
 .btn{
-width:100%;
+
+padding:13px 22px;
+
 }
+
+
 }
+
+
 </style>
 
 </head>
-
 <body>
 
-<header>
+
+<!-- LOADING SCREEN -->
+
+<div id="loader">
+<div class="loader-circle"></div>
+</div>
+
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="container nav-container">
 
 <div class="logo">
 NCAI<span>.</span>
 </div>
 
-<nav>
 
-<a href="#">Home</a>
+<nav id="navMenu">
+
+<a href="#home">Home</a>
+
 <a href="#about">About</a>
+
 <a href="#mission">Mission</a>
-<a href="#updates">Updates</a>
+
+<a href="#features">Features</a>
+
+<a href="#join">Join</a>
+
 <a href="#contact">Contact</a>
 
 </nav>
 
+
+
+<div class="menu-btn" id="menuBtn">
+
+☰
+
+</div>
+
+
+</div>
+
 </header>
 
-<section class="hero">
 
-<div class="hero-content">
+
+
+
+<!-- HERO SECTION -->
+
+
+<section id="home" class="hero">
+
+
+<div class="hero-bg"></div>
+
+
+<div class="container hero-content">
+
+
+<div class="hero-text reveal">
+
 
 <h1>
+
 Voice Against
+
 <span>Corruption</span>
+
 </h1>
+
+
 
 <p>
 
-No Chance Against Corruption India (NCAI) is committed to promoting
-transparency, accountability, and integrity by empowering citizens
-to report corruption, raise awareness, and create positive change.
+NCAI (No Chance Against Corruption India) is a people's movement
+working to create a transparent, accountable and corruption-free India.
+Together, we raise voices, report injustice and build awareness.
 
 </p>
 
-<div class="buttons">
+
+
+
+<div class="hero-buttons">
+
 
 <a href="https://forms.gle/D9Sf7DwSyZPgmbpb8"
-target="_blank"
-class="btn btn-orange">
 
-🚨 Report Corruption
+class="btn btn-primary"
+
+target="_blank">
+
+Report Corruption
 
 </a>
+
+
+
 
 <a href="https://forms.gle/T73kmzuNLyExCqWw6"
-target="_blank"
-class="btn btn-dark">
 
-🤝 Join as Volunteer
+class="btn btn-outline"
+
+target="_blank">
+
+Join Volunteer
 
 </a>
 
-</div>
 
-<div class="scroll">
-
-<i class="fa-solid fa-angles-down"></i>
-
-<br>
-
-Scroll Down
 
 </div>
 
+
 </div>
 
-</section>
 
-<!-- ===== PART 2 STARTS BELOW THIS LINE ===== -->
-```
-```html
-<!-- =========================
-        ABOUT SECTION
-========================= -->
 
-<section id="about" class="about">
 
-    <div class="section-title">
-        <h2>About NCAI</h2>
-        <p>Building a corruption-free India through awareness, transparency, and citizen participation.</p>
-    </div>
 
-    <div class="about-container">
 
-        <div class="about-card">
-            <i class="fa-solid fa-shield-halved"></i>
-            <h3>Our Vision</h3>
-            <p>
-                To create a transparent, accountable, and corruption-free society
-                where every citizen has the confidence to raise their voice.
-            </p>
-        </div>
+<div class="hero-card glass reveal">
 
-        <div class="about-card">
-            <i class="fa-solid fa-users"></i>
-            <h3>Community Driven</h3>
-            <p>
-                NCAI works with volunteers and responsible citizens to spread
-                awareness and encourage ethical practices across India.
-            </p>
-        </div>
 
-        <div class="about-card">
-            <i class="fa-solid fa-scale-balanced"></i>
-            <h3>Integrity First</h3>
-            <p>
-                We believe honesty, transparency, and accountability are the
-                foundation of a stronger nation.
-            </p>
-        </div>
+<div class="card-icon">
 
-    </div>
+⚡
+
+</div>
+
+
+
+<h3>
+
+People Powered Movement
+
+</h3>
+
+
+<p>
+
+Every citizen has the power to speak against corruption.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
 
 </section>
 
-<!-- =========================
-        LIVE STATS
-========================= -->
 
-<section class="stats">
 
-    <div class="stat-box">
-        <h2>250+</h2>
-        <p>Volunteers</p>
-    </div>
 
-    <div class="stat-box">
-        <h2>100+</h2>
-        <p>Complaints Received</p>
-    </div>
-
-    <div class="stat-box">
-        <h2>75+</h2>
-        <p>Cases Reviewed</p>
-    </div>
-
-    <div class="stat-box">
-        <h2>5+</h2>
-        <p>States Connected</p>
-    </div>
-
-</section>
-
-<!-- =========================
-        MISSION
-========================= -->
-
-<section id="mission" class="mission">
-
-    <div class="section-title">
-        <h2>Our Mission</h2>
-        <p>Together we can build a transparent India.</p>
-    </div>
-
-    <div class="mission-grid">
-
-        <div class="mission-card">
-            <i class="fa-solid fa-bullhorn"></i>
-            <h3>Raise Awareness</h3>
-            <p>
-                Educate people about corruption, their rights, and legal reporting channels.
-            </p>
-        </div>
-
-        <div class="mission-card">
-            <i class="fa-solid fa-file-circle-check"></i>
-            <h3>Responsible Reporting</h3>
-            <p>
-                Encourage citizens to report issues with supporting information through official channels.
-            </p>
-        </div>
-
-        <div class="mission-card">
-            <i class="fa-solid fa-handshake-angle"></i>
-            <h3>Volunteer Network</h3>
-            <p>
-                Build a strong nationwide volunteer community dedicated to social awareness.
-            </p>
-        </div>
-
-        <div class="mission-card">
-            <i class="fa-solid fa-earth-asia"></i>
-            <h3>Positive Change</h3>
-            <p>
-                Promote honesty, accountability, and public participation for a better future.
-            </p>
-        </div>
-
-    </div>
-
-</section>
 
 <style>
 
-section{
-padding:90px 8%;
+
+/* =====================
+ NAVBAR
+===================== */
+
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:1000;
+
+padding:20px 0;
+
+background:
+
+rgba(13,17,23,.65);
+
+backdrop-filter:blur(15px);
+
+border-bottom:
+
+1px solid rgba(255,255,255,.08);
+
 }
 
-.section-title{
-text-align:center;
-margin-bottom:50px;
+
+
+.nav-container{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
 }
 
-.section-title h2{
-font-size:42px;
-color:#ff6b00;
-margin-bottom:10px;
+
+
+.logo{
+
+font-size:32px;
+
+font-weight:900;
+
+letter-spacing:2px;
+
 }
 
-.section-title p{
-color:#bbb;
-font-size:17px;
+
+.logo span{
+
+color:var(--orange);
+
 }
 
-.about-container{
+
+
+nav{
+
+display:flex;
+
+gap:35px;
+
+}
+
+
+
+nav a{
+
+font-weight:600;
+
+color:#ddd;
+
+transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+color:var(--orange);
+
+}
+
+
+
+
+
+.menu-btn{
+
+display:none;
+
+font-size:28px;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+/* =====================
+ HERO
+===================== */
+
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+position:relative;
+
+overflow:hidden;
+
+padding-top:120px;
+
+}
+
+
+
+.hero-bg{
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+right:-200px;
+
+top:100px;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(255,107,0,.45),
+
+transparent 65%
+
+);
+
+
+filter:blur(30px);
+
+animation:
+
+float 6s infinite alternate;
+
+}
+
+
+
+
+.hero-content{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+
+grid-template-columns:
+
+1.2fr .8fr;
+
+gap:50px;
+
+align-items:center;
+
 }
+
+
+
+.hero-text h1{
+
+font-size:
+
+clamp(45px,6vw,80px);
+
+line-height:1.1;
+
+font-weight:900;
+
+}
+
+
+
+.hero-text h1 span{
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#ff6b00,
+
+#ffb36b
+
+);
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+
+.hero-text p{
+
+margin-top:25px;
+
+font-size:20px;
+
+line-height:1.7;
+
+color:var(--gray);
+
+max-width:650px;
+
+}
+
+
+
+
+.hero-buttons{
+
+display:flex;
+
+gap:20px;
+
+margin-top:40px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+
+
+.hero-card{
+
+padding:45px 35px;
+
+text-align:center;
+
+animation:
+
+float 5s infinite alternate;
+
+}
+
+
+
+.hero-card .card-icon{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.hero-card h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.hero-card p{
+
+color:var(--gray);
+
+line-height:1.6;
+
+}
+
+
+
+
+
+@keyframes float{
+
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(-25px);
+
+}
+
+
+}
+
+
+
+
+
+
+/* MOBILE NAV */
+
+
+@media(max-width:850px){
+
+
+
+nav{
+
+position:absolute;
+
+top:80px;
+
+left:5%;
+
+width:90%;
+
+display:none;
+
+flex-direction:column;
+
+background:
+
+rgba(13,17,23,.95);
+
+padding:30px;
+
+border-radius:20px;
+
+}
+
+
+
+nav.active{
+
+display:flex;
+
+}
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+
+.hero-content{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+
+
+.hero-text p{
+
+margin:auto;
+
+}
+
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+
+.hero-card{
+
+margin-top:30px;
+
+}
+
+
+
+}
+
+
+
+</style>
+        <!-- =========================
+ABOUT SECTION
+========================= -->
+
+
+<section id="about">
+
+
+<div class="container">
+
+
+<h2 class="section-title reveal">
+
+About <span>NCAI</span>
+
+</h2>
+
+
+
+<p class="section-desc reveal">
+
+No Chance Against Corruption India (NCAI) is a citizen-driven initiative
+dedicated to creating awareness, encouraging transparency and empowering
+people to raise their voice against corruption.
+
+</p>
+
+
+
+
+<div class="about-grid">
+
+
+
+<div class="about-card glass reveal">
+
+
+<div class="about-icon">
+
+🛡️
+
+</div>
+
+
+<h3>
+
+Our Purpose
+
+</h3>
+
+
+<p>
+
+To build a responsible society where every citizen understands their rights
+and stands against unethical practices.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="about-card glass reveal">
+
+
+<div class="about-icon">
+
+⚖️
+
+</div>
+
+
+<h3>
+
+Our Approach
+
+</h3>
+
+
+<p>
+
+Through awareness campaigns, public participation and digital platforms,
+we connect people who want positive change.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="about-card glass reveal">
+
+
+<div class="about-icon">
+
+🔥
+
+</div>
+
+
+<h3>
+
+Our Commitment
+
+</h3>
+
+
+<p>
+
+We believe that collective action and courage can create a cleaner,
+more accountable India.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+MISSION SECTION
+========================= -->
+
+
+<section id="mission" class="mission-section">
+
+
+<div class="container">
+
+
+<div class="mission-box glass reveal">
+
+
+
+<h2>
+
+Our <span>Mission</span>
+
+</h2>
+
+
+
+<p>
+
+Our mission is to provide citizens with a platform where they can report
+corruption, spread awareness and contribute towards building a transparent
+and fair society.
+
+</p>
+
+
+
+<div class="mission-points">
+
+
+
+<div>
+
+<span>01</span>
+
+Awareness Against Corruption
+
+</div>
+
+
+
+<div>
+
+<span>02</span>
+
+Citizen Empowerment
+
+</div>
+
+
+
+<div>
+
+<span>03</span>
+
+Transparency & Accountability
+
+</div>
+
+
+
+<div>
+
+<span>04</span>
+
+Community Participation
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<style>
+
+
+/* =========================
+ABOUT STYLE
+========================= */
+
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+
 
 .about-card{
-background:#161b22;
-padding:35px;
-border-radius:15px;
+
+padding:40px 30px;
+
 text-align:center;
-transition:.3s;
+
+transition:.4s;
+
 }
+
+
 
 .about-card:hover{
-transform:translateY(-10px);
+
+transform:
+
+translateY(-15px);
+
+border-color:
+
+rgba(255,107,0,.5);
+
 }
 
-.about-card i{
-font-size:45px;
-color:#ff6b00;
+
+
+.about-icon{
+
+font-size:55px;
+
 margin-bottom:20px;
+
 }
+
+
 
 .about-card h3{
+
+font-size:28px;
+
 margin-bottom:15px;
+
 }
+
+
 
 .about-card p{
-color:#ccc;
+
+color:var(--gray);
+
 line-height:1.7;
+
 }
 
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:25px;
-background:#11151c;
+
+
+
+
+/* =========================
+MISSION
+========================= */
+
+
+.mission-section{
+
+position:relative;
+
 }
 
-.stat-box{
-background:#161b22;
-padding:35px;
-border-radius:15px;
+
+
+.mission-box{
+
+padding:70px;
+
 text-align:center;
+
 }
 
-.stat-box h2{
-font-size:42px;
-color:#ff6b00;
-margin-bottom:10px;
-}
 
-.stat-box p{
-color:#ccc;
-}
 
-.mission-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
+.mission-box h2{
 
-.mission-card{
-background:#161b22;
-padding:35px;
-border-radius:15px;
-transition:.3s;
-text-align:center;
-}
-
-.mission-card:hover{
-transform:translateY(-10px);
-}
-
-.mission-card i{
 font-size:45px;
-color:#ff6b00;
-margin-bottom:20px;
+
+margin-bottom:25px;
+
 }
 
-.mission-card h3{
-margin-bottom:15px;
+
+
+.mission-box h2 span{
+
+color:var(--orange);
+
 }
 
-.mission-card p{
+
+
+.mission-box p{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:20px;
+
 line-height:1.8;
-color:#ccc;
+
+color:var(--gray);
+
 }
+
+
+
+
+
+.mission-points{
+
+margin-top:50px;
+
+display:grid;
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+gap:20px;
+
+}
+
+
+
+.mission-points div{
+
+padding:25px;
+
+border-radius:20px;
+
+background:
+
+rgba(255,255,255,.05);
+
+font-weight:600;
+
+}
+
+
+
+.mission-points span{
+
+display:block;
+
+font-size:35px;
+
+color:var(--orange);
+
+margin-bottom:10px;
+
+}
+
+
+
+
+
+
+@media(max-width:900px){
+
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.mission-box{
+
+padding:40px 20px;
+
+}
+
+
+
+.mission-box h2{
+
+font-size:34px;
+
+}
+
+
+
+.mission-points{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+}
+
+
+
 
 </style>
-
-<!-- ===== PART 3 STARTS BELOW ===== -->
-```
-```html
-<!-- =========================
-        LATEST UPDATES
+        <!-- =========================
+STATISTICS SECTION
 ========================= -->
 
-<section id="updates" class="updates">
 
-    <div class="section-title">
-        <h2>Latest Updates</h2>
-        <p>Stay updated with the latest activities and announcements from NCAI.</p>
-    </div>
+<section class="stats-section">
 
-    <div class="updates-container">
 
-        <div class="update-card">
-            <i class="fa-solid fa-bullhorn"></i>
-            <h3>Volunteer Recruitment</h3>
-            <p>
-                Join NCAI as a volunteer and help spread awareness against corruption across India.
-            </p>
-            <a href="https://forms.gle/T73kmzuNLyExCqWw6" target="_blank">Join Now →</a>
-        </div>
+<div class="container">
 
-        <div class="update-card">
-            <i class="fa-solid fa-file-circle-exclamation"></i>
-            <h3>Report Corruption</h3>
-            <p>
-                Witnessed corruption? Submit your complaint securely through our official complaint form.
-            </p>
-            <a href="https://forms.gle/D9Sf7DwSyZPgmbpb8" target="_blank">Submit Complaint →</a>
-        </div>
 
-        <div class="update-card">
-            <i class="fa-solid fa-newspaper"></i>
-            <h3>Community Awareness</h3>
-            <p>
-                NCAI regularly shares educational content to promote transparency and responsible citizenship.
-            </p>
-            <a href="#">Learn More →</a>
-        </div>
+<h2 class="section-title reveal">
 
-    </div>
+Our <span>Impact</span>
+
+</h2>
+
+
+<p class="section-desc reveal">
+
+Together we are building awareness and encouraging citizens
+to participate in creating a transparent society.
+
+</p>
+
+
+
+
+<div class="stats-grid">
+
+
+
+<div class="stat-card glass reveal">
+
+
+<h3 class="counter" data-target="10000">
+
+0
+
+</h3>
+
+
+<p>
+
+Citizens Reached
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card glass reveal">
+
+
+<h3 class="counter" data-target="500">
+
+0
+
+</h3>
+
+
+<p>
+
+Reports Received
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card glass reveal">
+
+
+<h3 class="counter" data-target="100">
+
+0
+
+</h3>
+
+
+<p>
+
+Volunteers
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card glass reveal">
+
+
+<h3 class="counter" data-target="25">
+
+0
+
+</h3>
+
+
+<p>
+
+Awareness Campaigns
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
+
+
+
+
+
+
+
+
 <!-- =========================
-        WHY JOIN NCAI
+FEATURE SECTION
 ========================= -->
 
-<section class="join">
 
-    <div class="section-title">
-        <h2>Why Join NCAI?</h2>
-        <p>Become a part of a growing community working for positive change.</p>
-    </div>
+<section id="features">
 
-    <div class="join-grid">
 
-        <div class="join-card">
-            <i class="fa-solid fa-certificate"></i>
-            <h3>Certificate</h3>
-            <p>Receive recognition for your contribution and active participation.</p>
-        </div>
+<div class="container">
 
-        <div class="join-card">
-            <i class="fa-solid fa-users"></i>
-            <h3>Team Work</h3>
-            <p>Collaborate with dedicated volunteers from different regions.</p>
-        </div>
 
-        <div class="join-card">
-            <i class="fa-solid fa-lightbulb"></i>
-            <h3>Leadership</h3>
-            <p>Develop communication, management, and leadership skills.</p>
-        </div>
+<h2 class="section-title reveal">
 
-        <div class="join-card">
-            <i class="fa-solid fa-heart"></i>
-            <h3>Social Impact</h3>
-            <p>Contribute towards building a more transparent and responsible society.</p>
-        </div>
+Our <span>Features</span>
 
-    </div>
+</h2>
+
+
+
+<p class="section-desc reveal">
+
+Powerful tools and initiatives designed to connect citizens
+and encourage action against corruption.
+
+</p>
+
+
+
+
+
+<div class="features-grid">
+
+
+
+
+
+<div class="feature-card glass reveal">
+
+
+<div class="feature-icon">
+
+📢
+
+</div>
+
+
+<h3>
+
+Report Corruption
+
+</h3>
+
+
+<p>
+
+A simple platform where citizens can share concerns
+and raise their voice.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="feature-card glass reveal">
+
+
+<div class="feature-icon">
+
+👥
+
+</div>
+
+
+<h3>
+
+Volunteer Network
+
+</h3>
+
+
+<p>
+
+Join a community of responsible people working
+towards positive change.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="feature-card glass reveal">
+
+
+<div class="feature-icon">
+
+🎯
+
+</div>
+
+
+<h3>
+
+Awareness Programs
+
+</h3>
+
+
+<p>
+
+Educational campaigns to spread knowledge about
+rights and responsibilities.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="feature-card glass reveal">
+
+
+<div class="feature-icon">
+
+🔍
+
+</div>
+
+
+<h3>
+
+Transparency
+
+</h3>
+
+
+<p>
+
+Promoting accountability through citizen participation
+and awareness.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="feature-card glass reveal">
+
+
+<div class="feature-icon">
+
+🌐
+
+</div>
+
+
+<h3>
+
+Digital Movement
+
+</h3>
+
+
+<p>
+
+Using technology to connect people and create
+a stronger voice.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="feature-card glass reveal">
+
+
+<div class="feature-icon">
+
+🚀
+
+</div>
+
+
+<h3>
+
+Future Vision
+
+</h3>
+
+
+<p>
+
+Building a corruption-free future through collective
+efforts.
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
-```html
-<!-- =========================
-        OUR IMPACT
-========================= -->
 
-<section class="impact">
 
-    <div class="section-title">
-        <h2>Our Impact</h2>
-        <p>Together we are building a stronger, transparent and corruption-free India.</p>
-    </div>
 
-    <div class="impact-grid">
 
-        <div class="impact-card">
-            <i class="fa-solid fa-user-group"></i>
-            <h3>Growing Community</h3>
-            <p>Dedicated volunteers working together to spread awareness across India.</p>
-        </div>
 
-        <div class="impact-card">
-            <i class="fa-solid fa-hand-holding-heart"></i>
-            <h3>Citizen Support</h3>
-            <p>Helping citizens understand their rights and encouraging responsible reporting.</p>
-        </div>
 
-        <div class="impact-card">
-            <i class="fa-solid fa-shield-heart"></i>
-            <h3>Transparency</h3>
-            <p>Promoting honesty, accountability and ethical values in society.</p>
-        </div>
 
-    </div>
-
-</section>
 
 <style>
 
-.impact-grid{
+
+/* =====================
+STATISTICS
+===================== */
+
+
+.stats-grid{
+
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+gap:25px;
+
+margin-top:60px;
+
 }
 
-.impact-card{
-background:#161b22;
-padding:35px;
-border-radius:15px;
+
+
+.stat-card{
+
+
+padding:40px 20px;
+
 text-align:center;
-transition:.3s;
+
+transition:.4s;
+
 }
 
-.impact-card:hover{
+
+
+.stat-card:hover{
+
+
 transform:translateY(-10px);
+
+
+box-shadow:
+
+0 20px 40px rgba(255,107,0,.15);
+
+
 }
 
-.impact-card i{
-font-size:45px;
-color:#ff6b00;
+
+
+.stat-card h3{
+
+
+font-size:55px;
+
+color:var(--orange);
+
+font-weight:900;
+
+
+}
+
+
+
+.stat-card p{
+
+
+margin-top:15px;
+
+font-size:18px;
+
+color:var(--gray);
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+FEATURES
+===================== */
+
+
+
+.features-grid{
+
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:30px;
+
+margin-top:60px;
+
+
+}
+
+
+
+.feature-card{
+
+
+padding:40px 30px;
+
+transition:.4s;
+
+
+}
+
+
+
+.feature-card:hover{
+
+
+transform:
+
+translateY(-15px);
+
+
+border:
+
+1px solid rgba(255,107,0,.5);
+
+
+}
+
+
+
+.feature-icon{
+
+
+font-size:50px;
+
 margin-bottom:20px;
+
+
 }
 
-.impact-card h3{
+
+
+.feature-card h3{
+
+
+font-size:26px;
+
 margin-bottom:15px;
+
+
 }
 
-.impact-card p{
-color:#ccc;
-line-height:1.8;
+
+
+.feature-card p{
+
+
+color:var(--gray);
+
+line-height:1.7;
+
+
 }
+
+
+
+
+
+
+@media(max-width:900px){
+
+
+.stats-grid{
+
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+
+}
+
+
+
+.features-grid{
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:500px){
+
+
+.stats-grid{
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
+.stat-card h3{
+
+
+font-size:45px;
+
+
+}
+
+
+}
+
+
 
 </style>
-
-<!-- ===== PART 4 STARTS BELOW ===== -->
-```
-  ```html
-<!-- =========================
-        CONTACT
+        <!-- =========================
+WHY JOIN NCAI
 ========================= -->
 
-<section id="contact" class="contact">
 
-    <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>Get in touch with the NCAI team.</p>
-    </div>
+<section id="join">
 
-    <div class="contact-box">
 
-        <div class="contact-card">
-            <i class="fa-solid fa-envelope"></i>
-            <h3>Email</h3>
-            <p>nochacnceallindia@gmail.com</p>
-        </div>
+<div class="container">
 
-        <div class="contact-card">
-            <i class="fa-brands fa-instagram"></i>
-            <h3>Instagram</h3>
-            <p>@nochanceallindia</p>
-        </div>
 
-        <div class="contact-card">
-            <i class="fa-brands fa-x-twitter"></i>
-            <h3>X (Twitter)</h3>
-            <p>@nochanceindia</p>
-        </div>
+<h2 class="section-title reveal">
 
-    </div>
+Why Join <span>NCAI?</span>
+
+</h2>
+
+
+
+<p class="section-desc reveal">
+
+Become a part of a responsible community that believes
+in transparency, awareness and positive change.
+
+</p>
+
+
+
+
+
+<div class="join-grid">
+
+
+
+<div class="join-card glass reveal">
+
+
+<div class="join-number">
+
+01
+
+</div>
+
+
+<h3>
+
+Make An Impact
+
+</h3>
+
+
+<p>
+
+Your voice can help spread awareness and encourage
+a corruption-free environment.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="join-card glass reveal">
+
+
+<div class="join-number">
+
+02
+
+</div>
+
+
+<h3>
+
+Develop Skills
+
+</h3>
+
+
+<p>
+
+Learn teamwork, communication, leadership and
+digital awareness skills.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="join-card glass reveal">
+
+
+<div class="join-number">
+
+03
+
+</div>
+
+
+<h3>
+
+Connect People
+
+</h3>
+
+
+<p>
+
+Work with like-minded citizens who want
+positive changes in society.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="join-card glass reveal">
+
+
+<div class="join-number">
+
+04
+
+</div>
+
+
+<h3>
+
+Be The Change
+
+</h3>
+
+
+<p>
+
+Small actions by citizens can create a
+large impact.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="join-button reveal">
+
+
+<a href="https://forms.gle/T73kmzuNLyExCqWw6"
+
+target="_blank"
+
+class="btn btn-primary">
+
+Become A Volunteer
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
 
 </section>
 
+
+
+
+
+
+
+
+
 <!-- =========================
-        FOOTER
+TIMELINE
 ========================= -->
+
+
+<section class="timeline-section">
+
+
+<div class="container">
+
+
+<h2 class="section-title reveal">
+
+Our <span>Journey</span>
+
+</h2>
+
+
+
+<p class="section-desc reveal">
+
+A roadmap showing our commitment towards
+building awareness and citizen participation.
+
+</p>
+
+
+
+
+
+<div class="timeline">
+
+
+
+
+
+<div class="timeline-item reveal">
+
+
+<div class="timeline-dot"></div>
+
+
+<div class="timeline-content glass">
+
+
+<h3>
+
+Foundation
+
+</h3>
+
+
+<span>
+
+Step 01
+
+</span>
+
+
+<p>
+
+Started the movement with the vision of
+creating awareness against corruption.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="timeline-item reveal">
+
+
+<div class="timeline-dot"></div>
+
+
+<div class="timeline-content glass">
+
+
+<h3>
+
+Community Building
+
+</h3>
+
+
+<span>
+
+Step 02
+
+</span>
+
+
+<p>
+
+Connecting volunteers and responsible citizens
+for collective action.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="timeline-item reveal">
+
+
+<div class="timeline-dot"></div>
+
+
+<div class="timeline-content glass">
+
+
+<h3>
+
+Digital Expansion
+
+</h3>
+
+
+<span>
+
+Step 03
+
+</span>
+
+
+<p>
+
+Using technology and online platforms to
+spread awareness.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="timeline-item reveal">
+
+
+<div class="timeline-dot"></div>
+
+
+<div class="timeline-content glass">
+
+
+<h3>
+
+Future Vision
+
+</h3>
+
+
+<span>
+
+Step 04
+
+</span>
+
+
+<p>
+
+Creating a stronger network for transparency
+and accountability.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<style>
+
+
+/* =====================
+JOIN SECTION
+===================== */
+
+
+.join-grid{
+
+
+display:grid;
+
+grid-template-columns:
+
+repeat(4,1fr);
+
+gap:25px;
+
+margin-top:60px;
+
+
+}
+
+
+
+.join-card{
+
+
+padding:35px 25px;
+
+transition:.4s;
+
+
+}
+
+
+
+.join-card:hover{
+
+
+transform:translateY(-12px);
+
+
+}
+
+
+
+
+.join-number{
+
+
+font-size:45px;
+
+font-weight:900;
+
+color:var(--orange);
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.join-card h3{
+
+
+font-size:25px;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.join-card p{
+
+
+color:var(--gray);
+
+line-height:1.7;
+
+
+}
+
+
+
+
+.join-button{
+
+
+text-align:center;
+
+margin-top:50px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================
+TIMELINE
+===================== */
+
+
+.timeline{
+
+
+position:relative;
+
+max-width:900px;
+
+margin:70px auto 0;
+
+
+}
+
+
+
+.timeline::before{
+
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+bottom:0;
+
+width:3px;
+
+background:
+
+var(--orange);
+
+transform:translateX(-50%);
+
+
+}
+
+
+
+.timeline-item{
+
+
+position:relative;
+
+width:50%;
+
+padding:25px;
+
+
+}
+
+
+
+.timeline-item:nth-child(odd){
+
+
+left:0;
+
+
+}
+
+
+.timeline-item:nth-child(even){
+
+
+left:50%;
+
+
+}
+
+
+
+.timeline-dot{
+
+
+position:absolute;
+
+top:45px;
+
+right:-12px;
+
+height:24px;
+
+width:24px;
+
+background:var(--orange);
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 25px var(--orange);
+
+
+}
+
+
+
+.timeline-item:nth-child(even) .timeline-dot{
+
+
+left:-12px;
+
+
+}
+
+
+
+.timeline-content{
+
+
+padding:35px;
+
+
+}
+
+
+
+.timeline-content h3{
+
+
+font-size:28px;
+
+margin-bottom:10px;
+
+
+}
+
+
+
+.timeline-content span{
+
+
+color:var(--orange);
+
+font-weight:700;
+
+
+}
+
+
+
+.timeline-content p{
+
+
+margin-top:15px;
+
+color:var(--gray);
+
+line-height:1.6;
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:900px){
+
+
+
+.join-grid{
+
+
+grid-template-columns:
+
+1fr 1fr;
+
+
+}
+
+
+
+.timeline::before{
+
+
+left:20px;
+
+
+}
+
+
+
+.timeline-item,
+
+.timeline-item:nth-child(even){
+
+
+width:100%;
+
+left:0;
+
+padding-left:60px;
+
+
+}
+
+
+
+.timeline-dot,
+
+.timeline-item:nth-child(even) .timeline-dot{
+
+
+left:8px;
+
+right:auto;
+
+
+}
+
+
+
+}
+
+
+
+
+
+@media(max-width:500px){
+
+
+.join-grid{
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
+        
+
+}
+
+</style>
+        <!-- =========================
+FAQ SECTION
+========================= -->
+
+
+<section class="faq-section">
+
+
+<div class="container">
+
+
+<h2 class="section-title reveal">
+
+Frequently Asked <span>Questions</span>
+
+</h2>
+
+
+
+<p class="section-desc reveal">
+
+Some common questions about NCAI and our mission.
+
+</p>
+
+
+
+
+
+<div class="faq-container">
+
+
+
+
+
+<div class="faq-item glass reveal">
+
+
+<button class="faq-question">
+
+What is NCAI?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+
+NCAI (No Chance Against Corruption India) is a citizen-driven
+initiative focused on awareness, transparency and encouraging
+people to raise their voice against corruption.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="faq-item glass reveal">
+
+
+<button class="faq-question">
+
+How can I report corruption?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+
+You can submit your concern through our official
+Report Corruption form available on the website.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="faq-item glass reveal">
+
+
+<button class="faq-question">
+
+How can I join NCAI as a volunteer?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+
+Anyone interested in contributing can join our volunteer
+network by filling the volunteer registration form.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="faq-item glass reveal">
+
+
+<button class="faq-question">
+
+Is NCAI a government organization?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+
+NCAI is a citizen initiative working towards awareness
+and social responsibility.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+CONTACT SECTION
+========================= -->
+
+
+<section id="contact">
+
+
+<div class="container">
+
+
+<h2 class="section-title reveal">
+
+Contact <span>NCAI</span>
+
+</h2>
+
+
+
+<p class="section-desc reveal">
+
+Have questions or want to collaborate?
+Connect with us.
+
+</p>
+
+
+
+
+
+<div class="contact-box glass reveal">
+
+
+
+<div>
+
+
+<h3>
+
+Let's Build A Better India
+
+</h3>
+
+
+<p>
+
+Join hands with NCAI and become a voice
+against corruption.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="contact-buttons">
+
+
+<a href="https://forms.gle/D9Sf7DwSyZPgmbpb8"
+
+target="_blank"
+
+class="btn btn-primary">
+
+Report Now
+
+</a>
+
+
+
+<a href="https://forms.gle/T73kmzuNLyExCqWw6"
+
+target="_blank"
+
+class="btn btn-outline">
+
+Join Us
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
 
 <footer>
 
-<h2>NCAI</h2>
+
+<div class="container footer-container">
+
+
+
+<div class="footer-brand">
+
+
+<h2>
+
+NCAI<span>.</span>
+
+</h2>
+
 
 <p>
-Voice Against Corruption
+
+Voice Against Corruption.
+Building awareness, transparency
+and citizen participation.
+
 </p>
 
-<div class="footer-buttons">
-
-<a href="https://forms.gle/D9Sf7DwSyZPgmbpb8" target="_blank">
-🚨 Report Corruption
-</a>
-
-<a href="https://forms.gle/T73kmzuNLyExCqWw6" target="_blank">
-🤝 Join Volunteer
-</a>
 
 </div>
 
-<p class="copy">
-© 2026 NCAI • All Rights Reserved
-</p>
+
+
+
+
+<div class="footer-links">
+
+
+<h3>
+
+Quick Links
+
+</h3>
+
+
+<a href="#home">
+
+Home
+
+</a>
+
+
+<a href="#about">
+
+About
+
+</a>
+
+
+<a href="#mission">
+
+Mission
+
+</a>
+
+
+<a href="#contact">
+
+Contact
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="footer-social">
+
+
+<h3>
+
+Follow Us
+
+</h3>
+
+
+<a href="#">
+
+Instagram
+
+</a>
+
+
+<a href="#">
+
+Twitter
+
+</a>
+
+
+<a href="#">
+
+YouTube
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="copyright">
+
+
+© 2026 NCAI - No Chance Against Corruption India. All Rights Reserved.
+
+
+</div>
+
 
 </footer>
 
+
+
+
+
+
+
+
 <style>
 
-.contact-box{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+
+/* =====================
+FAQ
+===================== */
+
+
+.faq-container{
+
+
+max-width:850px;
+
+margin:60px auto 0;
+
+
 }
 
-.contact-card{
-background:#161b22;
-padding:35px;
-border-radius:15px;
-text-align:center;
-transition:.3s;
-}
 
-.contact-card:hover{
-transform:translateY(-8px);
-}
 
-.contact-card i{
-font-size:42px;
-color:#ff6b00;
+.faq-item{
+
+
 margin-bottom:20px;
+
+overflow:hidden;
+
+
 }
+
+
+
+.faq-question{
+
+
+width:100%;
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:20px;
+
+font-weight:700;
+
+padding:25px;
+
+display:flex;
+
+justify-content:space-between;
+
+cursor:pointer;
+
+
+}
+
+
+
+.faq-question span{
+
+
+color:var(--orange);
+
+font-size:30px;
+
+
+}
+
+
+
+.faq-answer{
+
+
+max-height:0;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+
+
+.faq-answer p{
+
+
+padding:0 25px 25px;
+
+color:var(--gray);
+
+line-height:1.7;
+
+
+}
+
+
+
+.faq-item.active .faq-answer{
+
+
+max-height:200px;
+
+
+}
+
+
+
+.faq-item.active .faq-question span{
+
+
+transform:rotate(45deg);
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+CONTACT
+===================== */
+
+
+.contact-box{
+
+
+padding:50px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:30px;
+
+
+}
+
+
+
+.contact-box h3{
+
+
+font-size:35px;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.contact-box p{
+
+
+color:var(--gray);
+
+font-size:18px;
+
+
+}
+
+
+
+.contact-buttons{
+
+
+display:flex;
+
+gap:20px;
+
+}
+
+
+
+
+
+/* =====================
+FOOTER
+===================== */
+
 
 footer{
-margin-top:80px;
-padding:50px 8%;
-background:#000;
-text-align:center;
+
+
+padding:70px 0 20px;
+
+border-top:
+
+1px solid rgba(255,255,255,.1);
+
+
 }
 
-footer h2{
-color:#ff6b00;
-margin-bottom:10px;
+
+
+.footer-container{
+
+
+display:grid;
+
+grid-template-columns:
+
+2fr 1fr 1fr;
+
+gap:40px;
+
+
 }
 
-footer p{
-color:#bbb;
+
+
+.footer-brand h2{
+
+
+font-size:40px;
+
+
 }
 
-.footer-buttons{
-margin:30px 0;
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+
+
+.footer-brand span{
+
+
+color:var(--orange);
+
+
 }
 
-.footer-buttons a{
-background:#ff6b00;
-color:#fff;
-padding:15px 28px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
+
+
+.footer-brand p{
+
+
+color:var(--gray);
+
+line-height:1.7;
+
+margin-top:15px;
+
+
+}
+
+
+
+footer h3{
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.footer-links a,
+
+.footer-social a{
+
+
+display:block;
+
+color:var(--gray);
+
+margin-bottom:12px;
+
 transition:.3s;
+
+
 }
 
-.footer-buttons a:hover{
-transform:translateY(-5px);
-background:#ff8a33;
+
+
+.footer-links a:hover,
+
+.footer-social a:hover{
+
+
+color:var(--orange);
+
+
 }
 
-.copy{
-margin-top:30px;
-font-size:14px;
-color:#777;
+
+
+.copyright{
+
+
+text-align:center;
+
+margin-top:50px;
+
+padding-top:20px;
+
+border-top:
+
+1px solid rgba(255,255,255,.1);
+
+color:#888;
+
+
 }
+
+
+
+
+
+
+
+@media(max-width:800px){
+
+
+.contact-box{
+
+
+flex-direction:column;
+
+text-align:center;
+
+
+}
+
+
+
+.footer-container{
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
+
+.contact-buttons{
+
+
+flex-direction:column;
+
+
+}
+
+
+}
+
 
 </style>
+        <!-- =========================
+FAQ SECTION
+========================= -->
+
+
+<section class="faq-section">
+
+
+<div class="container">
+
+
+<h2 class="section-title reveal">
+
+Frequently Asked <span>Questions</span>
+
+</h2>
+
+
+
+<p class="section-desc reveal">
+
+Some common questions about NCAI and our mission.
+
+</p>
+
+
+
+
+
+<div class="faq-container">
+
+
+
+
+
+<div class="faq-item glass reveal">
+
+
+<button class="faq-question">
+
+What is NCAI?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+
+NCAI (No Chance Against Corruption India) is a citizen-driven
+initiative focused on awareness, transparency and encouraging
+people to raise their voice against corruption.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="faq-item glass reveal">
+
+
+<button class="faq-question">
+
+How can I report corruption?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+
+You can submit your concern through our official
+Report Corruption form available on the website.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="faq-item glass reveal">
+
+
+<button class="faq-question">
+
+How can I join NCAI as a volunteer?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+
+Anyone interested in contributing can join our volunteer
+network by filling the volunteer registration form.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="faq-item glass reveal">
+
+
+<button class="faq-question">
+
+Is NCAI a government organization?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+
+NCAI is a citizen initiative working towards awareness
+and social responsibility.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+CONTACT SECTION
+========================= -->
+
+
+<section id="contact">
+
+
+<div class="container">
+
+
+<h2 class="section-title reveal">
+
+Contact <span>NCAI</span>
+
+</h2>
+
+
+
+<p class="section-desc reveal">
+
+Have questions or want to collaborate?
+Connect with us.
+
+</p>
+
+
+
+
+
+<div class="contact-box glass reveal">
+
+
+
+<div>
+
+
+<h3>
+
+Let's Build A Better India
+
+</h3>
+
+
+<p>
+
+Join hands with NCAI and become a voice
+against corruption.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="contact-buttons">
+
+
+<a href="https://forms.gle/D9Sf7DwSyZPgmbpb8"
+
+target="_blank"
+
+class="btn btn-primary">
+
+Report Now
+
+</a>
+
+
+
+<a href="https://forms.gle/T73kmzuNLyExCqWw6"
+
+target="_blank"
+
+class="btn btn-outline">
+
+Join Us
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+
+<footer>
+
+
+<div class="container footer-container">
+
+
+
+<div class="footer-brand">
+
+
+<h2>
+
+NCAI<span>.</span>
+
+</h2>
+
+
+<p>
+
+Voice Against Corruption.
+Building awareness, transparency
+and citizen participation.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="footer-links">
+
+
+<h3>
+
+Quick Links
+
+</h3>
+
+
+<a href="#home">
+
+Home
+
+</a>
+
+
+<a href="#about">
+
+About
+
+</a>
+
+
+<a href="#mission">
+
+Mission
+
+</a>
+
+
+<a href="#contact">
+
+Contact
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="footer-social">
+
+
+<h3>
+
+Follow Us
+
+</h3>
+
+
+<a href="#">
+
+Instagram
+
+</a>
+
+
+<a href="#">
+
+Twitter
+
+</a>
+
+
+<a href="#">
+
+YouTube
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="copyright">
+
+
+© 2026 NCAI - No Chance Against Corruption India. All Rights Reserved.
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+<style>
+
+
+/* =====================
+FAQ
+===================== */
+
+
+.faq-container{
+
+
+max-width:850px;
+
+margin:60px auto 0;
+
+
+}
+
+
+
+.faq-item{
+
+
+margin-bottom:20px;
+
+overflow:hidden;
+
+
+}
+
+
+
+.faq-question{
+
+
+width:100%;
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:20px;
+
+font-weight:700;
+
+padding:25px;
+
+display:flex;
+
+justify-content:space-between;
+
+cursor:pointer;
+
+
+}
+
+
+
+.faq-question span{
+
+
+color:var(--orange);
+
+font-size:30px;
+
+
+}
+
+
+
+.faq-answer{
+
+
+max-height:0;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+
+
+.faq-answer p{
+
+
+padding:0 25px 25px;
+
+color:var(--gray);
+
+line-height:1.7;
+
+
+}
+
+
+
+.faq-item.active .faq-answer{
+
+
+max-height:200px;
+
+
+}
+
+
+
+.faq-item.active .faq-question span{
+
+
+transform:rotate(45deg);
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+CONTACT
+===================== */
+
+
+.contact-box{
+
+
+padding:50px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:30px;
+
+
+}
+
+
+
+.contact-box h3{
+
+
+font-size:35px;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.contact-box p{
+
+
+color:var(--gray);
+
+font-size:18px;
+
+
+}
+
+
+
+.contact-buttons{
+
+
+display:flex;
+
+gap:20px;
+
+}
+
+
+
+
+
+/* =====================
+FOOTER
+===================== */
+
+
+footer{
+
+
+padding:70px 0 20px;
+
+border-top:
+
+1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+.footer-container{
+
+
+display:grid;
+
+grid-template-columns:
+
+2fr 1fr 1fr;
+
+gap:40px;
+
+
+}
+
+
+
+.footer-brand h2{
+
+
+font-size:40px;
+
+
+}
+
+
+
+.footer-brand span{
+
+
+color:var(--orange);
+
+
+}
+
+
+
+.footer-brand p{
+
+
+color:var(--gray);
+
+line-height:1.7;
+
+margin-top:15px;
+
+
+}
+
+
+
+footer h3{
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.footer-links a,
+
+.footer-social a{
+
+
+display:block;
+
+color:var(--gray);
+
+margin-bottom:12px;
+
+transition:.3s;
+
+
+}
+
+
+
+.footer-links a:hover,
+
+.footer-social a:hover{
+
+
+color:var(--orange);
+
+
+}
+
+
+
+.copyright{
+
+
+text-align:center;
+
+margin-top:50px;
+
+padding-top:20px;
+
+border-top:
+
+1px solid rgba(255,255,255,.1);
+
+color:#888;
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:800px){
+
+
+.contact-box{
+
+
+flex-direction:column;
+
+text-align:center;
+
+
+}
+
+
+
+.footer-container{
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
+
+.contact-buttons{
+
+
+flex-direction:column;
+
+
+}
+
+
+}
+
+
+</style>
+        <!-- =========================
+ACCESSIBILITY + SEO POLISH
+========================= -->
+
 
 <script>
 
-// Navbar shadow while scrolling
-window.addEventListener("scroll",function(){
 
-const header=document.querySelector("header");
+// Add keyboard accessibility for FAQ
 
-if(window.scrollY>50){
-header.style.background="#000";
-}else{
-header.style.background="rgba(0,0,0,.75)";
-}
+document.querySelectorAll(".faq-question").forEach(btn=>{
 
-});
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+btn.setAttribute("aria-expanded","false");
 
-anchor.addEventListener("click",function(e){
 
-e.preventDefault();
+btn.addEventListener("click",()=>{
 
-document.querySelector(this.getAttribute("href")).scrollIntoView({
 
-behavior:"smooth"
+let expanded = btn.getAttribute("aria-expanded");
+
+
+btn.setAttribute(
+"aria-expanded",
+expanded==="false" ? "true" : "false"
+);
+
 
 });
 
-});
 
 });
+
+
+
+
+// Lazy loading images if added later
+
+
+document.querySelectorAll("img").forEach(img=>{
+
+
+img.setAttribute(
+"loading",
+"lazy"
+);
+
+
+});
+
+
 
 </script>
 
+
+
+
+
+<!-- =========================
+FINAL SEO FOOTER DATA
+========================= -->
+
+
+<script type="application/ld+json">
+
+{
+
+"@context":"https://schema.org",
+
+"@type":"WebSite",
+
+"name":"NCAI - No Chance Against Corruption India",
+
+"url":"https://nochanceall-india.github.io/ncai-web/",
+
+"description":"Voice Against Corruption India",
+
+"potentialAction":{
+
+"@type":"SearchAction",
+
+"target":"https://nochanceall-india.github.io/ncai-web/?search={search_term_string}",
+
+"query-input":"required name=search_term_string"
+
+}
+
+}
+
+</script>
+
+
+
+
+
 </body>
+
 </html>
-```
 
